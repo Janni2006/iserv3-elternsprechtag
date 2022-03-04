@@ -13,12 +13,5 @@ use IServ\CoreBundle\DependencyInjection\IServBaseExtension;
  */
 class jhgElternsprechtagExtension extends IServBaseExtension
 {
-    public function load(array $configs, ContainerBuilder $container)
-    {
-        $loader = new YamlFileLoader(
-            $container,
-            new FileLocator('/../Resources/config')
-        );
-        $loader->load('services.yml');
-    }
+    
 }
