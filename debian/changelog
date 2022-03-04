@@ -1,0 +1,5 @@
+iserv3-elternsprechtag (22.01.15.1) stable; urgency=medium
+
+  * Fixed locale clash
+
+ -- Joseph-Haydn-Gymnasium Senden <test@jhgcloud.de>  Sat, 15 Jan 2022 21:27:50 +0100

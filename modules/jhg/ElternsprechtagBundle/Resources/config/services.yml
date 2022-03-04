@@ -1,0 +1,18 @@
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+        public: false
+
+    IServ\ElternsprechtagBundle\Controller\:
+        resource: '../../Controller/*'
+        public: true
+        tags: ['controller.service_arguments']
+
+    IServ\ElternsprechtagBundle\:
+        resource: '../../*'
+        # exclude: '../../{Entity,Resources}/*'
+
+    IServ\ElternsprechtagBundle\EventListener\MenuListener:
+    tags:
+        - { name: kernel.event_listener, event: iserv_portal.menu_main, method: onBuildMainMenu }

@@ -1,0 +1,19 @@
+Source: jhg-iserv3-elternsprechtag
+Section: misc
+Priority: optional
+Maintainer: Joseph-Haydn-Gymnasium Senden <test@jhgcloud.de>
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-iserv,
+Standards-Version: 4.5.0
+Homepage: ${iserv:Homepage}
+
+Package: jhg-iserv3-elternsprechtag
+Architecture: all
+Depends: iserv3-host,
+         ${misc:Depends},
+         ${perl:Depends}
+Xb-Private-Iserv-Revision: ${iserv:Revision}
+Description: IServ 3: Elternsprechtag
+ Dieses Paket bietet eine Oberfläche zur Beantragung und Bestätigung von Terminen
+ bei einem Elternsprechtag.
+Tag: suite::iserv:portal, role::plugin
