@@ -16,4 +16,4 @@ services:
     IServ\ElternsprechtagBundle\EventListener\MenuListener:
     tags:
 #        - { name: kernel.event_listener, event: iserv_portal.menu_main, method: onBuildMainMenu }
-         - { name: kernel.event_listener, event: iserv_portal.menu_main, method: onBuildAdminMenu }
+         - { name: kernel.event_listener, event: iserv_portal.menu_admin, method: onBuildAdminMenu }

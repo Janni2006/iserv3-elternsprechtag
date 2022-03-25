@@ -1,2 +1,0 @@
-msgid "Testname"
-msgstr "Testname"

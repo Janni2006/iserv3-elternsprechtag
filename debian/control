@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Joseph-Haydn-Gymnasium Senden <test@jhgcloud.de>
 Build-Depends: debhelper-compat (= 13),
                dh-sequence-iserv,
-# Standards-Version: 4.5.0
+Standards-Version: 4.5.0
 Homepage: ${iserv:Homepage}
 
 Package: jhg-iserv3-elternsprechtag
