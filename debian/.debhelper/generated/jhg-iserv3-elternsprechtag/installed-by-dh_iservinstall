@@ -1,0 +1,9 @@
+./modules/jhg/ElternsprechtagBundle/jhgElternsprechtagBundle.php
+./modules/jhg/ElternsprechtagBundle/EventListener/MenuListener.php
+./modules/jhg/ElternsprechtagBundle/Controller/DefaultController.php
+./modules/jhg/ElternsprechtagBundle/Resources/webpack.config.js
+./modules/jhg/ElternsprechtagBundle/Resources/views/default/empty.html.twig
+./modules/jhg/ElternsprechtagBundle/Resources/config/services.yml
+./modules/jhg/ElternsprechtagBundle/DependencyInjection/jhgElternsprechtagExtension.php
+./LICENSE
+./share/locale/de/test.po
