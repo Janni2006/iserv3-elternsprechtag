@@ -19,4 +19,4 @@ class jhgElternsprechtagBundle extends Bundle implements AutoloadRoutingBundleIn
     {
         return new jhgElternsprechtagExtension();
     }
-}
+} 
