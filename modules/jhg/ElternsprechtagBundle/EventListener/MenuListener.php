@@ -10,34 +10,49 @@ use IServ\CoreBundle\EventListener\MainMenuListenerInterface;
 use IServ\CoreBundle\Menu\MenuBuilder;
 use IServ\Library\Config\Config;
 
-class MenuListener implements MainMenuListenerInterface
+// class MenuListener implements MainMenuListenerInterface
+// {
+//     /**
+//      * @var Config
+//      */
+//     private $config;
+
+//     public function __construct(Config $config)
+//     {
+//         $this->config = $config;
+//     }
+//    /**
+//      * {@inheritDoc}
+//      */
+//     public function onBuildMainMenu(MenuEvent $event): void {
+//         $menu = $event->getMenu()->getChild('system');
+
+//         $item = $menu->addChild('jhg_nav', [
+//             'route' => 'jhg_test_nav',
+//             'label' => _('Test'),
+//         ]);
+
+//         $item->setExtra('icon', 'key--pencil');
+//         $item->setExtra('icon_style', 'fugue');
+//     }
+// }
+
+
+class MenuListener implements AdminMenuListenerInterface
 {
     /**
-     * @var Config
-     */
-    private $config;
-
-    public function __construct(Config $config)
-    {
-        $this->config = $config;
-    }
-   /**
      * {@inheritDoc}
      */
-    public function onBuildMainMenu(MenuEvent $event): void {
-        // if(!$event->getAuthorizationChecker()->isGranted(Privilege::ADMIN)
-        // && !$event->getAuthorizationChecker()->isGranted(Privilege::TEACHER)
-        // && !$event->getAuthorizationChecker()->isGranted(Privilege::STUDENT))
-        //     return;
-
-
-        $event->getMenu(MenuBuilder::GROUP_NETWORK)
-            ->addChild('test', ['route' => 'internet_index', 'label' => _('Testname')])
-            ->setExtra('icon', 'espt')
-            ->setExtra('icon_style', 'iserv')
-            ->setExtra('icon_fallback', 'users')
-            ->setExtra('icon_fallback_style', 'fugue')
+    public function onBuildAdminMenu(MenuEvent $event): void
+    {
+        $menu = $event->getMenu();
+        $block = $menu->getChild(self::ADMIN_NETWORK);
+        $block->addChild(
+            'test_index1',
+            ['route' => 'internet_index', 'label' => _('E-Mail server statistics')]
+        )
+            ->setExtra('orderNumber', 99)
+            ->setExtra('icon', 'mail')
         ;
     }
-
 }

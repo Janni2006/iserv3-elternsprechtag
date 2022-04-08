@@ -16,6 +16,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class DefaultController
@@ -23,23 +24,15 @@ use Symfony\Component\Validator\Constraints\NotBlank;
  * @Route("/test")
  */
 class DefaultController extends AbstractPageController {
-    // /**
-    //  * @param Config $config
-    //  * @param Request $request
-    //  * @return Response
-    //  * @Route("/", name="test")
-    //  */
     /**
-     * @Route("/internet", name="internet_index")
-     * @Template()
-     *
-     * @return array|RedirectResponse
-     */
+    * @Route("/test/internet", name="internet_index")
+    * @Template()
+    * @return Response
+    */
     public function index(Request $request, Config $config) {
-        $this->addBreadcrumb(_("test"));
 
-        $this->addBreadcrumb(_('Internet'), $this->generateUrl('internet_index'));
-
-        return $this->render("@DH_ElternsprechtagBundle/empty.html.twig");
+        return $this->render("@jhgElternsprechtag/default/empty.html.twig", [
+            'category' => 'blablabla',
+        ]);
     }
 }
