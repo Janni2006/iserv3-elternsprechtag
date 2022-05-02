@@ -19,20 +19,20 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Class DefaultController
- * @package jhg\ElternsprechtagBundle\Controller
- * @Route("/test")
+ * 
+ * 
+ * 
  */
 class DefaultController extends AbstractPageController {
     /**
-    * @Route("/test/internet", name="internet_index")
-    * @Template()
+    * @Route("/test/internet/", name="internet_index")
+    * 
     * @return Response
     */
     public function index(Request $request, Config $config) {
 
-        return $this->render("@jhgElternsprechtag/default/empty.html.twig", [
-            'category' => 'blablabla',
-        ]);
+        return $this->render("@ElternsprechtagBundle/default/empty.html.twig");
+        // return $this->render(" @IServCore/Dashboard/main.html.twig");
+        // return new Response('<html><body>Test</body></html>');
     }
 }

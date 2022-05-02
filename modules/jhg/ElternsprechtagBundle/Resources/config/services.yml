@@ -4,16 +4,16 @@ services:
         autowire: true
         public: false
 
-    IServ\ElternsprechtagBundle\Controller\:
+    jhg\ElternsprechtagBundle\Controller\:
         resource: '../../Controller/*'
         public: true
         tags: ['controller.service_arguments']
 
-    IServ\ElternsprechtagBundle\:
+    jhg\ElternsprechtagBundle\:
         resource: '../../*'
-        # exclude: '../../{Entity,Resources}/*'
+        exclude: '../../{Entity,Resources}/*'
 
-    IServ\ElternsprechtagBundle\EventListener\MenuListener:
-    tags:
-#        - { name: kernel.event_listener, event: iserv_portal.menu_main, method: onBuildMainMenu }
-         - { name: kernel.event_listener, event: iserv_portal.menu_admin, method: onBuildAdminMenu }
+    jhg\ElternsprechtagBundle\EventListener\MenuListener:
+        tags:
+            - { name: kernel.event_listener, event: iserv_portal.menu_main, method: onBuildMainMenu }
+            # - { name: kernel.event_listener, event: iserv_portal.menu_admin, method: onBuildAdminMenu }

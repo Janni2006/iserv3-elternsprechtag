@@ -19,21 +19,18 @@ use Symfony\Component\DependencyInjection\Loader;
 class jhgElternsprechtagExtension extends IServBaseExtension
 {
 
-<<<<<<< HEAD
-=======
-//     /**
-//      * {@inheritDoc}
-//      */
-//     public function load(array $configs, ContainerBuilder $container)
-//     {
+    /**
+     * {@inheritDoc}
+     */
+    public function load(array $configs, ContainerBuilder $container)
+    {
 
-// //        $configuration = new Configuration($this->getAlias());
-// //        $config = $this->processConfiguration($configuration, $configs);
+//        $configuration = new Configuration($this->getAlias());
+//        $config = $this->processConfiguration($configuration, $configs);
 
-//         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-//         $loader->load('services.yml');
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader->load('services.yml');
 
-//     }
+    }
 
->>>>>>> 477787ee0af8a60e7915500b417389d9f859a03e
 }

@@ -6,7 +6,7 @@ namespace jhg\ElternsprechtagBundle;
 
 use IServ\CoreBundle\Routing\AutoloadRoutingBundleInterface;
 use jhg\ElternsprechtagBundle\DependencyInjection\jhgElternsprechtagExtension;
-# use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 
 /**
